@@ -1,0 +1,214 @@
+2025-06-19 13:06:08 [main] INFO  com.quizapp.QuizApplication - Starting Quiz Application...
+2025-06-19 13:06:09 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-06-19 13:06:09 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-19 13:06:12 [main] DEBUG org.hibernate.SQL - 
+    alter table options 
+       modify column optionText  TEXT not null
+2025-06-19 13:06:12 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column created_at  datetime(6) not null
+2025-06-19 13:06:12 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column explanation  TEXT
+2025-06-19 13:06:12 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column points  float(53)
+2025-06-19 13:06:12 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column updated_at  datetime(6)
+2025-06-19 13:06:12 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column attempt_date  datetime(6)
+2025-06-19 13:06:12 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column completed_date  datetime(6)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column percentageScore  float(53)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column score  float(53)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column created_at  datetime(6)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column description  TEXT
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column passing_score  float(53)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column updated_at  datetime(6)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table user_answers 
+       modify column answered_at  datetime(6)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table user_answers 
+       modify column points_earned  float(53)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column created_at  datetime(6)
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column role  enum ('ADMIN','USER') not null
+2025-06-19 13:06:13 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column updated_at  datetime(6)
+2025-06-19 13:06:13 [main] INFO  com.quizapp.util.HibernateUtil - Hibernate SessionFactory created successfully
+2025-06-19 13:06:14 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-06-19 13:06:14 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-06-19 13:06:14 [main] DEBUG org.hibernate.SQL - 
+    select
+        q1_0.id,
+        q1_0.created_at,
+        q1_0.creator_id,
+        q1_0.description,
+        q1_0.is_active,
+        q1_0.max_attempts,
+        q1_0.passing_score,
+        q1_0.time_limit,
+        q1_0.title,
+        q1_0.total_questions,
+        q1_0.updated_at 
+    from
+        quizzes q1_0 
+    order by
+        q1_0.created_at desc
+2025-06-19 13:11:40 [main] INFO  com.quizapp.QuizApplication - Starting Quiz Application...
+2025-06-19 13:11:40 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-06-19 13:11:41 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table options 
+       modify column optionText  TEXT not null
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column created_at  datetime(6) not null
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column explanation  TEXT
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column points  float(53)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table questions 
+       modify column updated_at  datetime(6)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column attempt_date  datetime(6)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column completed_date  datetime(6)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column percentageScore  float(53)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quiz_attempts 
+       modify column score  float(53)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column created_at  datetime(6)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column description  TEXT
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column passing_score  float(53)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table quizzes 
+       modify column updated_at  datetime(6)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table user_answers 
+       modify column answered_at  datetime(6)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table user_answers 
+       modify column points_earned  float(53)
+2025-06-19 13:11:44 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column created_at  datetime(6)
+2025-06-19 13:11:45 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column role  enum ('ADMIN','USER') not null
+2025-06-19 13:11:45 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       modify column updated_at  datetime(6)
+2025-06-19 13:11:45 [main] INFO  com.quizapp.util.HibernateUtil - Hibernate SessionFactory created successfully
+2025-06-19 13:11:45 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-06-19 13:11:45 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.is_active,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-06-19 13:11:45 [main] DEBUG org.hibernate.SQL - 
+    select
+        q1_0.id,
+        q1_0.created_at,
+        q1_0.creator_id,
+        q1_0.description,
+        q1_0.is_active,
+        q1_0.max_attempts,
+        q1_0.passing_score,
+        q1_0.time_limit,
+        q1_0.title,
+        q1_0.total_questions,
+        q1_0.updated_at 
+    from
+        quizzes q1_0 
+    order by
+        q1_0.created_at desc

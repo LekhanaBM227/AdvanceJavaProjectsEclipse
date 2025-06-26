@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- JDBC Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/quiz_app_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Lek!@#227</property>
+
+        <!-- SQL Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Show SQL in Console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Schema Management -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Annotated Entity Classes -->
+        <mapping class="com.quizapp.entity.User"/>
+        <mapping class="com.quizapp.entity.Quiz"/>
+        <mapping class="com.quizapp.entity.Question"/>
+        <mapping class="com.quizapp.entity.Option"/>
+        <mapping class="com.quizapp.entity.QuizAttempt"/>
+        <mapping class="com.quizapp.entity.UserAnswer"/>
+        <!-- Add more entity classes here as needed -->
+
+    </session-factory>
+</hibernate-configuration>

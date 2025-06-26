@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Video</title>
+</head>
+<body>
+    <h2>Upload a Video</h2>
+    <form method="post" action="UploadVideoServlet" enctype="multipart/form-data">
+        <label for="title">Video Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="videoFile">Select video file:</label><br>
+        <input type="file" id="videoFile" name="videoFile" accept="video/*" required><br><br>
+
+        <input type="submit" value="Upload">
+    </form>
+
+    <br>
+    <a href="WelcomeServlet">Back to Dashboard</a>
+</body>
+</html>
