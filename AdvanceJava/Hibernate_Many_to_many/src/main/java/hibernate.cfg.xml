@@ -1,0 +1,17 @@
+
+<hibernate-configuration>
+<session-factory>
+<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<!--  property name="connection.driver_class">com.mysql.jdbc.Driver</property  -->
+<property name="connection.url">jdbc:mysql://localhost/hib_gqt_db</property>
+<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+<property name="connection.username">root</property>
+<property name="connection.password">Lek!@#227</property>
+<property name="connection.pool_size">3</property>
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="current_session_context_class">thread</property>
+<property name="show_sql">true</property>
+<mapping class="com.hibernate.onetoone.Student"/>
+<mapping class="com.hibernate.onetoone.Course"/>
+</session-factory>
+</hibernate-configuration>
